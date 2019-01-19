@@ -5,20 +5,26 @@ module.exports = {
     mode: "development",
     module: {
         rules: [
-            {
-                test: /\.(sa|sc|c)ss/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: 'styles/[name].css'
-                        }
-                    },
-                    'extract-loader',
-                    'css-loader',
-                    'sass-loader'
-                ]
-            }
+					{
+						test: /\.(jpg|png)/,
+						use: [
+							'url-loader'
+						]
+					},
+					{
+							test: /\.(sa|sc|c)ss/,
+							use: [
+								{
+										loader: 'file-loader',
+										options: {
+												name: 'styles/[name].css'
+										}
+								},
+								'extract-loader',
+								'css-loader',
+								'sass-loader',
+							]
+					}
         ]
     },
     watch: true,
