@@ -40,7 +40,17 @@ header
 					&:hover
 						background-color: #9b7923
 						color: #fff
-
+.scroll-top
+	width: 20px
+	height: 20px
+	position: fixed
+	bottom: 30px
+	right: 30px
+	color: $dark-yellow
+	z-index: 10
+	&:hover
+		color: #000
+		cursor: pointer
 main
 	.main-image
 		padding: 20px
@@ -73,7 +83,7 @@ main
 				height: 100%
 				display: block
 				background-color: rgba(255, 255, 255, .8)
-			.col-md-3
+			.col-md-4
 				text-align: center
 				img
 					margin-bottom: 20px
@@ -129,7 +139,6 @@ main
 				background-color: rgba(0, 0, 0, .7)
 			.btn
 				font-size: 20px
-
 		&.faq
 			.accordion
 				.card
@@ -143,8 +152,7 @@ main
 							&:hover,
 							&:active,
 							&:focus
-								text-decoration: none
-						
+								text-decoration: none				
 		.title
 			font-size: 2rem
 			margin-bottom: 50px
@@ -216,6 +224,9 @@ main
 		margin-bottom: 30px
 		background: rgba(255, 255, 255, .8)
 		padding: 10px 0
+	.map-section
+		height: 500px
+		position: relative
 footer
 	background-color: #333
 	padding: 80px 0px
@@ -232,3 +243,23 @@ footer
 			margin-right: 20px
 			&:last-child
 				margin-right: 0
+.copyright
+	background-color: #111
+	display: flex
+	justify-content: center
+	padding: 20px
+	color: #666
+	p
+		margin: 0
+
+@media (max-width: 768px)
+	header 
+		.navbar 
+			.navbar-nav 
+				.nav-item 
+					.nav-link
+						padding: .8rem 1rem
+	main 
+		.section.make-order 
+			.steps-container
+				background: none

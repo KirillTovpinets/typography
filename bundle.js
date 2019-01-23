@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$(document).ready(function() {\n\tconsole.log('hello')\n})\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("$(document).ready(function() {\n\t$(\".nav-link, .scroll-top\").click(function(e) {\n\t\tlet target = $(this).attr('href');\n\t\tlet from = $(target).offset().top;\n\t\t$('html, body').animate({\n\t\t\tscrollTop: from\n\t\t}, 1000);\n\t\treturn false;\n\t})\n\t\n\tconst map = new google.maps.Map(document.getElementById('map'), {\n\t\t\tcenter: {lat: 53.912732780101635, lng: 27.569198115906357},\n\t\t\tzoom: 15\n\t});\n\t// let marker = new google.maps.Marker({\n\t// \t\tposition: position,\n\t// \t\tmap: map,\n\t// \t\ticon: 'img/marker.png'\n\t// });\n})\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
