@@ -1,4 +1,26 @@
+import AWN from "awesome-notifications";
+
 $(document).ready(function() {
+	// let options = {
+	// 	labels: {
+	// 		tip: "Your custom tip box label"
+	// 	}
+	// }
+	// let notifier = new AWN(options);
+	// notifier.success('Success message');
+	ymaps.ready(init);
+	function init() {
+		const map = new ymaps.Map('map', {
+				center: [53.912732780101635, 27.569198115906357],
+				zoom: 15
+		});
+		map.geoObjects.add(new ymaps.Placemark([53.912732780101635, 27.569198115906357], {
+				iconCaption: 'Мы находимся здесь',
+		}, {
+				preset: 'islands#dotIcon',
+				iconColor: '#735184'
+		}))
+	}
 	$(".nav-link, .scroll-top").click(function(e) {
 		let target = $(this).attr('href');
 		let from = $(target).offset().top;
@@ -14,10 +36,6 @@ $(document).ready(function() {
 		$('.adv-item').addClass('fadeInUp')
 		$('.contact-form').addClass('fadeInRight')
 	}, 1000);
-	const map = new google.maps.Map(document.getElementById('map'), {
-			center: {lat: 53.912732780101635, lng: 27.569198115906357},
-			zoom: 15
-	});
 	$('[data-toggle="tooltip"]').tooltip({ boundary: 'window' })
 	// let marker = new google.maps.Marker({
 	// 		position: position,

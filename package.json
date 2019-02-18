@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "awesome-notifications": "^2.2.9",
     "css-loader": "^2.0.1",
     "eslint": "^5.10.0",
     "extract-loader": "^3.1.0",
