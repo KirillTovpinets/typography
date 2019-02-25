@@ -20,9 +20,9 @@
 		<a href="#top" class="scroll-top">
 			<i class="fas fa-angle-up fa-2x"></i>
 		</a>
-		<a href="#" class="callback-btn text-danger" data-toggle="tooltip" title="Заказать звонок">
+		<button class="callback-btn text-danger" data-toggle="modal" data-target="#callback" title="Заказать звонок">
 			<i class="fas fa-phone-volume"></i>
-		</a>
+		</button>
 			<header>
 				<div class="top-bar">
 					<div class="container justify-content-end d-flex">
@@ -35,14 +35,14 @@
 				<div class="header">
 					<div class="container">
 						<div class="row justify-content-between align-items-center">
-							<div class="col-md-2">
+							<div class="col-xs-2">
 								<h1><img src="./src/img/logo.png" alt="" class="logo" width="150" title="Широкоформатная печать в Минске"></h1>
 							</div>
-							<div class="col-md-6">
+							<div class="d-none col-lg-6 d-lg-block d-xl-block d-xl-none">
 								<h2 class="title">Широкоформатная печать</h2>
 								<h3 class="slogan">Получайте больше новых клиентов каждый день</h3>
 							</div>
-							<div class="col-md-4 contacts">
+							<div class="col-xs-4 contacts">
 								<ul class="contact-phones">
 									<li><a href="tel:+375297705356" data-toggle="tooltip" title="Нажмите для вызова">+375 (29) 770 53 56</a></li>
 								</ul>
@@ -85,7 +85,7 @@
 			</header>
 			<main>
 				<section class="main-image">
-					<div class="container d-flex align-items-center">
+					<div class="container d-flex align-items-center flex-sm-column flex-lg-row align-items-center">
 						<div class="advantages">
 							<div class="adv-item d-flex animated">
 								<i class="fas fa-check fa-2x"></i>
@@ -100,16 +100,16 @@
 								<h4 class="adv-text">Эффективный дизайн</h4>
 							</div>
 						</div>
-						<form class="contact-form ml-auto mr-md-5 mr-auto bg-warning animated delay-15s">
+						<form class="contact-form ml-auto mr-md-5 mr-auto d-none d-sm-block bg-warning animated delay-15s" id="needAdv">
 							<div class="form-group row">
 								<div class="col-sm-12">
-									<input type="text" class="form-control" name="inputName" id="inputName" placeholder="Имя">
+									<input type="text" required class="form-control" name="name" id="name" placeholder="Имя">
 								</div>
 								<div class="col-sm-12">
-									<input type="text" class="form-control" name="inputName" id="inputName" placeholder="Номер телефона">
+									<input type="text" required class="form-control" name="phone" id="phone" placeholder="Номер телефона">
 								</div>
 								<div class="col-sm-12">
-									<input type="text" class="form-control" name="inputName" id="inputName" placeholder="Email">
+									<input type="email" required class="form-control" name="email" id="email" placeholder="Email">
 								</div>
 							</div>
 							<button type="submit" class="btn btn-block btn-danger">НУЖНА РЕКЛАМА</button>
@@ -120,7 +120,7 @@
 					<div class="container">
 						<h3 class="text-center title animated">ЧТО МЫ ПРЕДЛАГАЕМ</h3>
 						<div class="row">
-							<div class="col-md-3 col-sm-6 col-xs-12 text-center service animated delay-1s">
+							<div class="col-md-3 col-sm-6 col-xs-12 text-center service animated delay-05s">
 								<div class="icon">
 									<div class="fa-container">
 										<i class="far fa-clock fa-3x"></i>
@@ -128,7 +128,7 @@
 								</div>
 								<h4>Печатаем круглосуточно</h4>
 							</div>
-							<div class="col-md-3 col-sm-6 col-xs-12 text-center service animated delay-2s">
+							<div class="col-md-3 col-sm-6 col-xs-12 text-center service animated delay-1s">
 								<div class="icon">
 									<div class="fa-container">
 										<i class="fas fa-truck fa-3x"></i>
@@ -136,7 +136,7 @@
 								</div>
 								<h4>Организация доставки по Минску и РБ</h4>
 							</div>
-							<div class="col-md-3 col-sm-6 col-xs-12 text-center service animated delay-3s">
+							<div class="col-md-3 col-sm-6 col-xs-12 text-center service animated delay-15s">
 								<div class="icon">
 									<div class="fa-container">
 										<i class="far fa-calendar-alt fa-3x"></i>
@@ -144,7 +144,7 @@
 								</div>
 								<h4>Принимаем заказы каждый день</h4>
 							</div>
-							<div class="col-md-3 col-sm-6 col-xs-12 text-center service animated delay-4s">
+							<div class="col-md-3 col-sm-6 col-xs-12 text-center service animated delay-2s">
 								<div class="icon">
 									<div class="fa-container">
 										<i class="far fa-file fa-3x"></i>
@@ -158,13 +158,13 @@
 				<section class="section" id="pricelist">
 					<div class="container">
 						<h3 class="text-center title animated">ЦЕНЫ НА ШИРОКОФОРМАТНУЮ И ИНТЕРЬЕРНУЮ ПЕЧАТЬ</h3>
-						<div class="price-container animated delay-1s">
+						<div class="price-container text-center animated delay-05s">
 							<span class="price-item">На баннере от 7 руб/м<sup>2</sup></span>
 						</div>
-						<div class="price-container animated delay-2s">
+						<div class="price-container text-center animated delay-1s">
 							<span class="price-item">На пленке от 7 руб/м<sup>2</sup></span>
 						</div>
-						<div class="price-container animated delay-3s">
+						<div class="price-container text-center animated delay-15s">
 							<span class="price-item">На бумаге от 5 руб/м<sup>2</sup></span>
 						</div>
 						<div class="text-center btn-container">
@@ -178,37 +178,37 @@
 						<div class="steps-container mr-auto ml-auto col-md-8">
 							<div class="row">
 								<div class="col-md-6">
-									<div class="wrapper pos-0 animated delay-1s">
+									<div class="wrapper pos-0 animated delay-05s">
 										<h5 class="step-item">Оставить заявку на сайте - 1 мин</h5>
 										<hr class="divider ml-auto mr-0">
 									</div>
-									<div class="wrapper pos-2 animated delay-3s">
+									<div class="wrapper pos-2 animated delay-15s">
 										<h5 class="step-item">Расчет и согласование стоимости - 15 мин</h5>
 										<hr class="divider ml-auto mr-0">
 									</div>
-									<div class="wrapper pos-4 animated delay-5s">
+									<div class="wrapper pos-4 animated delay-25s">
 										<h5 class="step-item">Разработка макета если нужно</h5>
 										<hr class="divider ml-auto mr-0">
 									</div>
-									<div class="wrapper pos-6 animated delay-7s">
+									<div class="wrapper pos-6 animated delay-35s">
 										<h5 class="step-item">Печать - от 3 до 20 часов</h5>
 										<hr class="divider ml-auto mr-0">
 									</div>
 								</div>
 								<div class="col-md-6">
-									<div class="wrapper pos-1 animated delay-2s">
+									<div class="wrapper pos-1 animated delay-1s">
 										<h5 class="step-item">Уточняем параметры и требования - 5 мин</h5>
 										<hr class="divider ml-0 mr-auto">
 									</div>
-									<div class="wrapper pos-3 animated delay-4s">
+									<div class="wrapper pos-3 animated delay-2s">
 										<h5 class="step-item">Предоплата и передача макета в печать - 15 мин</h5>
 										<hr class="divider ml-0 mr-auto">
 									</div>
-									<div class="wrapper pos-5 animated delay-6s">
+									<div class="wrapper pos-5 animated delay-3s">
 										<h5 class="step-item">Утверждение макета - 15 мин</h5>
 										<hr class="divider ml-0 mr-auto">
 									</div>
-									<div class="wrapper pos-7 animated delay-8s">
+									<div class="wrapper pos-7 animated delay-4s">
 										<h5 class="step-item">Постпечатная обработка - 1-2 часа</h5>
 										<hr class="divider ml-0 mr-auto">
 									</div>
@@ -221,27 +221,27 @@
 					<div class="container">
 						<h3 class="title text-center animated">НАШИ ТЕХНИЧЕСКИЕ ВОЗМОЖНОСТИ</h3>
 						<div class="row justify-content-center mb-5">
-							<div class="col-md-4 col-sm-6 skill-item animated delay-1s">
+							<div class="col-md-4 col-sm-6 skill-item animated delay-05s">
 								<img src="./src/img/icons/win2.png" alt="">
 								<p class="description">Широкоформатная печать на баннере шириной 3м20см</p>
 							</div>
-							<div class="col-md-4 col-sm-6 skill-item animated delay-2s">
+							<div class="col-md-4 col-sm-6 skill-item animated delay-1s">
 								<img src="./src/img/icons/win3.png" alt="">
 								<p class="description">Широкоформатная печать на пленке, бумаге, холсте.</p>
 							</div>
-							<div class="col-md-4 col-sm-6 skill-item animated delay-3s">
+							<div class="col-md-4 col-sm-6 skill-item animated delay-15s">
 								<img src="./src/img/icons/win5.png" alt="">
 								<p class="description">Плоттерная резка пленки</p>
 							</div>
-							<div class="col-md-4 col-sm-6 skill-item animated delay-4s">
+							<div class="col-md-4 col-sm-6 skill-item animated delay-2s">
 								<img src="./src/img/icons/win6.png" alt="">
 								<p class="description">Лазерная резка и 3D фрезеровка пластика, дерева</p>
 							</div>
-							<div class="col-md-4 col-sm-6 skill-item animated delay-5s">
+							<div class="col-md-4 col-sm-6 skill-item animated delay-25s">
 								<img src="./src/img/icons/win9.png" alt="">
 								<p class="description">Брендирование автотранспорта</p>
 							</div>
-							<div class="col-md-4 col-sm-6 skill-item animated delay-6s">
+							<div class="col-md-4 col-sm-6 skill-item animated delay-3s">
 								<img src="./src/img/icons/win8.png" alt="">
 								<p class="description">Разработка дизайнов и допечатная подготовка</p>
 							</div>
@@ -425,12 +425,11 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDToCbblK9q4f1anjOx59jchtAUWoHRLaw"></script>
 		<script src="./bundle.js"></script>
 		<div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-labelledby="callbackLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
-					<form action="">
+					<form id="callback-form">
 						<div class="modal-header">
 							<h5 class="modal-title" id="callbackLabel">Введите свои данные</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -440,15 +439,15 @@
 						<div class="modal-body">
 							<div class="form-group">
 								<label for="">Ваше имя:</label>
-								<input type="text" class="form-control">
+								<input type="text" required name="name" class="form-control">
 							</div>
 							<div class="form-group">
 								<label for="">Ваш номер телефона:</label>
-								<input type="text" class="form-control">
+								<input type="text" required name="phone" class="form-control">
 							</div>
 							<div class="form-group">
 								<label for="">Комментарии:</label>
-								<textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
+								<textarea name="comments" class="form-control" id="" cols="30" rows="10"></textarea>
 							</div>
 						</div>
 						<div class="modal-footer">

@@ -15,6 +15,10 @@ $yellow: rgba(255, 198, 0, .83);
 	box-sizing: border-box
 .btn
 	padding: 0.875rem 1.75rem
+button:active,
+button:focus
+	outline: none
+	box-shadow:none
 a
 	color: #ccc
 	&:hover
@@ -28,8 +32,6 @@ a
 	top: 0
 	left: 0
 	z-index: 20
-.animated
-	opacity: 0
 header
 	.top-bar
 		border-bottom: 1px solid rgba(128, 128, 128, .3)
@@ -78,6 +80,8 @@ header
 	width: 20px
 	height: 20px
 	position: fixed
+	background: none
+	border: none
 	bottom: 30px
 	right: 30px
 	color: $dark-yellow
@@ -212,6 +216,7 @@ main
 					.card-header
 						background: $yellow
 						border-bottom: $dark-yellow
+						text-align: center
 						.btn
 							color: #000
 							font-size: 20px
@@ -329,3 +334,10 @@ footer
 		.section.make-order 
 			.steps-container
 				background: none
+	html
+		font-size: 12px
+	main .section.faq .accordion .card .card-header .btn
+		font-size: 14px
+@media (min-width: 992px)
+	.animated
+		opacity: 0

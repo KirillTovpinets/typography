@@ -21,6 +21,25 @@ $(document).ready(function() {
 				iconColor: '#735184'
 		}))
 	}
+	$('#needAdv, #callback-form').submit(function(event) {
+		event.preventDefault();
+
+		const req = $.ajax({
+			url: '/mail.php',
+			type: 'post',
+			data: $(this).serialize()
+		})
+		req.done((data) => {
+			let options = {
+				labels: {
+					tip: "Your custom tip box label"
+				}
+			}
+			let notifier = new AWN(options);
+			notifier.success('Ваше сообщение успешно отправлено');
+			$(this)[0].reset();
+		})
+	})
 	$(".nav-link, .scroll-top").click(function(e) {
 		let target = $(this).attr('href');
 		let from = $(target).offset().top;
@@ -36,16 +55,14 @@ $(document).ready(function() {
 		$('.adv-item').addClass('fadeInUp')
 		$('.contact-form').addClass('fadeInRight')
 	}, 1000);
-	$('[data-toggle="tooltip"]').tooltip({ boundary: 'window' })
-	// let marker = new google.maps.Marker({
-	// 		position: position,
-	// 		map: map,
-	// 		icon: 'img/marker.png'
-	// });
+	$('[data-tooltip="true"]').tooltip({ boundary: 'window' })
 
 	$(window).scroll(function(e){
 		let scrolled = $('html').scrollTop();
-		console.log(scrolled);	
+		let width = $('html').outerWidth();
+		if(width < 992) {
+			return;
+		}
 			if (scrolled > 300){
 				$('#services .title.animated').addClass('fadeInUp')
 				$('#services .service.animated').addClass('fadeInUp')
